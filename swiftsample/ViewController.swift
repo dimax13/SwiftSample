@@ -14,11 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var label: UILabel = UILabel(frame: CGRectZero)
-        label.text = "Hello, World!"
-        label.sizeToFit()
-        label.center = self.view.center
-        self.view.addSubview(label)
         
     }
 
@@ -27,6 +22,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var label: UILabel!
+    var count = 0
+    @IBAction func countUp() {
+        self.count += 1
+        self.label.text = String(self.count)
+    }
 }
 
